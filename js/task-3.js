@@ -1,13 +1,9 @@
 function getElementWidth(content, padding, border) {
     const contentWidth = parseFloat(content);
     const paddingWidth = parseFloat(padding);
-    const borderThickness = parseFloat(border);
+    const boxsizing = parseFloat(border);
 
-    if (isNaN(contentWidth) || isNaN(paddingWidth) || isNaN(borderThickness)) {
-        return "Invalid input. Please provide values in format 'Npx'.";
-    }
-
-    const totalWidth = contentWidth + 2 * paddingWidth + 2 * borderThickness;
+    const totalWidth = contentWidth + 2 * paddingWidth + 2 * boxsizing;
 
     return totalWidth;
 }
